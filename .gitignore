@@ -2,6 +2,9 @@
 node_modules/
 .npm
 
+# Claude Code
+.claude/
+
 # IDE
 .idea/
 .vscode/
