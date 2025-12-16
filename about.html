@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ivo</title>
+  <meta name="description" content="Learn more about me - a developer and designer passionate about creating exceptional digital experiences.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23a855f7' rx='15' width='100' height='100'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='system-ui'%3EI%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-text">Loading</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition"></div>
+
+  <!-- Background Effects -->
+  <div class="grid-bg"></div>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo" data-hover>
+      <div class="logo-icon">I</div>
+      <span>Ivo</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-link" data-hover>
+        <span class="nav-link-number">01</span>Home
+      </a>
+      <a href="workshop.html" class="nav-link" data-hover>
+        <span class="nav-link-number">02</span>Workshop
+      </a>
+      <a href="about.html" class="nav-link active" data-hover>
+        <span class="nav-link-number">03</span>About
+      </a>
+      <a href="index.html#contact" class="nav-link" data-hover>
+        <span class="nav-link-number">04</span>Contact
+      </a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- About Hero Section -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-2xl)); min-height: 100vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="about-hero">
+        <div class="about-image reveal">
+          <div class="about-image-decoration top">// PROFILE_IMG</div>
+          <div class="about-image-wrapper">
+            <!-- Replace with your actual photo -->
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face" alt="Your Name">
+          </div>
+          <div class="about-image-decoration bottom">LOCATION: NETHERLANDS</div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="section-label">About Me</span>
+          <h1>I'm <span class="highlight">Ivo</span>, a software developer based in the Netherlands</h1>
+
+          <div class="about-bio">
+            <p>
+              2nd year Software Development student at MBO Rijnland Gouda. I graduated VMBO-TL with honours and hold a C1 Anglia English certificate. Trilingual in English, Dutch, and Bulgarian.
+            </p>
+            <p>
+              I've built various projects including calculator apps, interactive JavaScript experiences (voice-reactive designs, rain simulations), and won two consecutive project weeks with my teams: first for a JavaScript game and second for a PHP quiz website with database integration.
+            </p>
+            <p>
+              Currently expanding my skills with Vue.js, MySQL databases, and gaining practical experience with 3CX and Yeastar systems for full-stack and communication-based development.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number text-gradient">2x</span>
+              <span class="stat-label">Project Week Winner</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-gradient">C1</span>
+              <span class="stat-label">English Certificate</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-gradient">3CX</span>
+              <span class="stat-label">Basic Certified</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number text-gradient">3</span>
+              <span class="stat-label">Languages Spoken</span>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-xl);">
+            <a href="mailto:thewildivo@gmail.com" class="btn btn-primary" data-hover>
+              Get In Touch
+              <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Expertise</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+
+      <div class="skills-grid stagger">
+        <div class="skill-category">
+          <h3><span class="icon">&lt;/&gt;</span> Frontend</h3>
+          <ul class="skill-list">
+            <li>HTML5 / CSS3</li>
+            <li>JavaScript</li>
+            <li>Vue.js (Learning)</li>
+            <li>Responsive Design</li>
+            <li>Interactive UI</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><span class="icon">{ }</span> Backend</h3>
+          <ul class="skill-list">
+            <li>PHP</li>
+            <li>MySQL Databases</li>
+            <li>Database Design</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><span class="icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> VoIP</h3>
+          <ul class="skill-list">
+            <li>3CX (Basic Certified)</li>
+            <li>Yeastar Systems</li>
+            <li>AI WhatsApp Chatbot</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><span class="icon">*</span> Soft Skills</h3>
+          <ul class="skill-list">
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Communication</li>
+            <li>Logical Thinking</li>
+            <li>Fast Learner</li>
+            <li>Team Collaboration</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><span class="icon">~</span> Languages</h3>
+          <ul class="skill-list">
+            <li>English (C1 Certified)</li>
+            <li>Dutch (Fluent)</li>
+            <li>Bulgarian (Native)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Timeline -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Journey</span>
+        <h2 class="section-title">Experience & Education</h2>
+      </div>
+
+      <div class="timeline stagger">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 - 2027</span>
+            <h3>Software Development</h3>
+            <span class="timeline-company">MBO Rijnland Gouda</span>
+            <p>2nd year student focusing on web & software development. Building projects with HTML, CSS, JavaScript, PHP, and databases. Currently expanding into Vue.js and MySQL.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3>2x Project Week Winner</h3>
+            <span class="timeline-company">MBO Rijnland</span>
+            <p>Won two consecutive project weeks with my teams: first for a JavaScript game and second for a PHP-based quiz website using database integration.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2020 - 2024</span>
+            <h3>VMBO-TL (Graduated with Honours)</h3>
+            <span class="timeline-company">Edith Stein College</span>
+            <p>International Dutch classes. Obtained C1 Anglia English certificate. Foundation for my development career.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Ivo</h3>
+        <p>Software developer based in the Netherlands, building digital experiences with passion and precision.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-hover>Home</a></li>
+          <li><a href="workshop.html" data-hover>Workshop</a></li>
+          <li><a href="about.html" data-hover>About</a></li>
+          <li><a href="index.html#contact" data-hover>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener" data-hover>GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ivo-ivanov-43a215330/" target="_blank" rel="noopener" data-hover>LinkedIn</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Ivo. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" data-hover>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ivo-ivanov-43a215330/" target="_blank" rel="noopener" aria-label="LinkedIn" data-hover>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+              </div>
+    </div>
+  </footer>
+
+  <!-- Additional Styles for About Page -->
+  <style>
+    .about-stats {
+      display: flex;
+      gap: var(--space-xl);
+      margin-top: var(--space-xl);
+      padding-top: var(--space-xl);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* Timeline Styles */
+    .timeline {
+      position: relative;
+      padding-left: var(--space-xl);
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 8px;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--color-accent), var(--color-border));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: var(--space-xl);
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: calc(-1 * var(--space-xl) + 1px);
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background: var(--color-bg);
+      border: 2px solid var(--color-accent);
+      border-radius: 50%;
+      box-shadow: 0 0 20px var(--color-accent-glow);
+    }
+
+    .timeline-item:hover .timeline-marker {
+      background: var(--color-accent);
+    }
+
+    .timeline-content {
+      background: var(--color-bg-secondary);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: var(--space-lg);
+      transition: all var(--duration-normal) var(--ease-out);
+    }
+
+    .timeline-item:hover .timeline-content {
+      border-color: var(--color-accent);
+      box-shadow: 0 0 30px var(--color-accent-glow);
+    }
+
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .timeline-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin: var(--space-sm) 0;
+    }
+
+    .timeline-company {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      display: block;
+      margin-bottom: var(--space-sm);
+    }
+
+    .timeline-content p {
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .about-stats {
+        flex-wrap: wrap;
+        gap: var(--space-lg);
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+    }
+  </style>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

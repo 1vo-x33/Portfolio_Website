@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop | Ivo</title>
+  <meta name="description" content="Explore my collection of projects - from web applications to design systems, each crafted with attention to detail.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%23a855f7' rx='15' width='100' height='100'/%3E%3Ctext x='50' y='68' font-size='50' text-anchor='middle' fill='white' font-family='system-ui'%3EI%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-text">Loading Workshop</div>
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="page-transition"></div>
+
+  <!-- Background Effects -->
+  <div class="grid-bg"></div>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo" data-hover>
+      <div class="logo-icon">I</div>
+      <span>Ivo</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-link" data-hover>
+        <span class="nav-link-number">01</span>Home
+      </a>
+      <a href="workshop.html" class="nav-link active" data-hover>
+        <span class="nav-link-number">02</span>Workshop
+      </a>
+      <a href="about.html" class="nav-link" data-hover>
+        <span class="nav-link-number">03</span>About
+      </a>
+      <a href="index.html#contact" class="nav-link" data-hover>
+        <span class="nav-link-number">04</span>Contact
+      </a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Workshop Hero -->
+  <section class="section" style="padding-top: calc(var(--header-height) + var(--space-2xl));">
+    <div class="container">
+      <div class="workshop-hero reveal">
+        <span class="section-label">The Workshop</span>
+        <h1 class="section-title" style="max-width: 800px;">
+          A collection of <span class="text-gradient">digital artifacts</span> I've crafted
+        </h1>
+        <p style="color: var(--color-text-muted); max-width: 600px; margin-top: var(--space-lg); font-size: 1.1rem;">
+          Each project represents a unique challenge solved through code, design, and creative problem-solving. Filter by category or browse the full collection.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="workshop-filters reveal" style="margin-top: var(--space-xl);">
+        <button class="filter-btn active" data-filter="all" data-hover>All Projects</button>
+        <button class="filter-btn" data-filter="web" data-hover>Web Development</button>
+        <button class="filter-btn" data-filter="design" data-hover>UI/UX Design</button>
+        <button class="filter-btn" data-filter="creative" data-hover>Creative Tech</button>
+        <button class="filter-btn" data-filter="tools" data-hover>Tools & Apps</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="workshop-grid stagger" style="margin-top: var(--space-xl);">
+        <!-- Project 1: P5js Equalizer -->
+        <a href="project-equalizer.html" class="project-card" data-category="creative" data-hover>
+          <div class="project-card-image">
+            <img src="Media/Equalizer/equalizer.png" alt="P5js Equalizer">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">p5.js</span>
+              <span class="project-tag">WebGL</span>
+              <span class="project-tag">Audio</span>
+            </div>
+            <h3 class="project-card-title">P5js Equalizer</h3>
+            <p class="project-card-desc">Audio-reactive 3D visualization that responds to microphone input with dynamic colors and shapes.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 2: Quiz -->
+        <a href="project-quiz.html" class="project-card" data-category="web" data-hover>
+          <div class="project-card-image">
+            <img src="Media/Quiz/question.png" alt="English Quiz" style="object-fit: contain; background: #1a1a25;">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <h3 class="project-card-title">English Quiz</h3>
+            <p class="project-card-desc">Interactive multiple-choice quiz covering English grammar, vocabulary, and spelling with instant feedback.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 3: Raad Het Nummer -->
+        <a href="project-raad-het-nummer.html" class="project-card" data-category="web" data-hover>
+          <div class="project-card-image">
+            <img src="Media/Number_Game/juist.png" alt="Raad Het Nummer" style="object-fit: contain; background: #1a1a25;">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <h3 class="project-card-title">Raad Het Nummer</h3>
+            <p class="project-card-desc">Number guessing game where you guess a random number between 0-100 with hints and attempt tracking.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 4: Rain -->
+        <a href="project-rain.html" class="project-card" data-category="creative" data-hover>
+          <div class="project-card-image" style="background-image: url('Media/rains/rain.png'); background-size: cover; background-position: center;">
+            <img src="Media/rains/rain.png" alt="Rain Particle System">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">p5.js</span>
+              <span class="project-tag">Particles</span>
+              <span class="project-tag">Interactive</span>
+            </div>
+            <h3 class="project-card-title">Rain</h3>
+            <p class="project-card-desc">Interactive particle system with falling raindrops that react to your mouse cursor.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 5: Vue Weather App -->
+        <a href="project-vue-app.html" class="project-card" data-category="web" data-hover>
+          <div class="project-card-image">
+            <img src="Media/Weather_App/Warm.png" alt="Vue Weather App" style="object-fit: contain; background: #1a1a25;">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">Vue.js</span>
+              <span class="project-tag">API</span>
+              <span class="project-tag">Weather</span>
+            </div>
+            <h3 class="project-card-title">Vue Weather App</h3>
+            <p class="project-card-desc">Weather application built with Vue.js that fetches and displays real-time weather data from an external API.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 6: Telecomlijn Website -->
+        <a href="project-telecomlijn.html" class="project-card" data-category="web" data-hover style="position: relative;">
+          <span class="live-badge">Live</span>
+          <div class="project-card-image">
+            <img src="Media/Telecomlijn/Telecomlijn.png" alt="Telecomlijn Website" style="object-fit: contain; background: #0a0f0a;">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">Next.js 16</span>
+              <span class="project-tag">React 19</span>
+              <span class="project-tag">TypeScript</span>
+            </div>
+            <h3 class="project-card-title">Telecomlijn Website</h3>
+            <p class="project-card-desc">B2B telecommunications website with 3CX live chat integration, AnyDesk remote support, and 22 service pages.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 7: Deli Bazar -->
+        <a href="project-deli-bazar.html" class="project-card" data-category="web" data-hover>
+          <div class="project-card-image">
+            <img src="Media/deli_bazar/homepage_deli.png" alt="Deli Bazar Website" style="object-fit: contain; background: #1a1a25;">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">TypeScript</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+            <h3 class="project-card-title">Deli Bazar</h3>
+            <p class="project-card-desc">Restaurant website for a Turkish & Mediterranean restaurant in Rotterdam, built with React and Supabase.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 8: Casa Dawn -->
+        <a href="project-casa-dawn.html" class="project-card" data-category="web" data-hover>
+          <div class="project-card-image">
+            <img src="Media/Casa_dawn/Casa_dawn.png" alt="Casa Dawn Website">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3 class="project-card-title">Casa Dawn</h3>
+            <p class="project-card-desc">Specialty coffee shop website for Casa Dawn in Rotterdam, featuring elegant design and smooth animations.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Project 9: Meat Point -->
+        <a href="project-meat-point.html" class="project-card" data-category="web" data-hover style="position: relative;">
+          <span class="live-badge">Live</span>
+          <div class="project-card-image">
+            <img src="Media/meat_point/meat_point.png" alt="Meat Point Website">
+          </div>
+          <div class="project-card-content">
+            <div class="project-card-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3 class="project-card-title">Meat Point</h3>
+            <p class="project-card-desc">Restaurant website for Meat Point Rotterdam, serving Döner Kebab, Coffee & Sandwiches.</p>
+          </div>
+          <div class="project-card-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M7 17L17 7M17 7H7M17 7v10"/>
+            </svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Ivo</h3>
+        <p>Software developer based in the Netherlands, building digital experiences with passion and precision.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html" data-hover>Home</a></li>
+          <li><a href="workshop.html" data-hover>Workshop</a></li>
+          <li><a href="about.html" data-hover>About</a></li>
+          <li><a href="index.html#contact" data-hover>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://github.com" target="_blank" rel="noopener" data-hover>GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ivo-ivanov-43a215330/" target="_blank" rel="noopener" data-hover>LinkedIn</a></li>
+                  </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Ivo. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub" data-hover>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/ivo-ivanov-43a215330/" target="_blank" rel="noopener" aria-label="LinkedIn" data-hover>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </a>
+              </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
