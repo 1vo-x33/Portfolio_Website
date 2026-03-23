@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ProjectFilters.init();
   PageTransitions.init();
   MagneticButtons.init();
+  CookieConsent.init();
 });
 
 // ============================================
@@ -486,6 +487,7 @@ const Navigation = {
     this.isOpen = true;
     this.nav.classList.add('active');
     this.menuToggle.classList.add('active');
+    this.menuToggle.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
 
     if (SmoothScroll.lenis) {
@@ -497,6 +499,7 @@ const Navigation = {
     this.isOpen = false;
     this.nav.classList.remove('active');
     this.menuToggle.classList.remove('active');
+    this.menuToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
 
     if (SmoothScroll.lenis) {
@@ -731,3 +734,63 @@ console.log(
   '%c Software Developer // Netherlands ',
   'color: #a855f7; font-size: 14px; font-family: "JetBrains Mono", monospace;'
 );
+
+// ============================================
+// COOKIE CONSENT
+// ============================================
+
+const CookieConsent = {
+  banner: null,
+
+  init() {
+    this.banner = document.getElementById('cookieBanner');
+    if (!this.banner) return;
+
+    const consent = localStorage.getItem('cookieConsent');
+    if (!consent) {
+      setTimeout(() => {
+        this.banner.classList.add('visible');
+      }, 1500);
+    } else {
+      this.applyConsent(consent);
+    }
+
+    const acceptBtn = document.getElementById('cookieAccept');
+    const declineBtn = document.getElementById('cookieDecline');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', () => {
+        this.setConsent('accepted');
+      });
+    }
+
+    if (declineBtn) {
+      declineBtn.addEventListener('click', () => {
+        this.setConsent('declined');
+      });
+    }
+  },
+
+  setConsent(value) {
+    localStorage.setItem('cookieConsent', value);
+    this.applyConsent(value);
+    this.banner.classList.remove('visible');
+  },
+
+  applyConsent(value) {
+    if (value === 'accepted') {
+      this.setCookie('portfolio_visited', 'true', 365);
+      this.setCookie('portfolio_theme', 'cyber-purple', 365);
+    }
+  },
+
+  setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString();
+    document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/; SameSite=Lax';
+  },
+
+  getCookie(name) {
+    const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? decodeURIComponent(match[2]) : null;
+  }
+};
