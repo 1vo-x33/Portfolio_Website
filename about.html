@@ -75,16 +75,7 @@
   <!-- About Hero Section -->
   <section class="section" style="padding-top: calc(var(--header-height) + var(--space-2xl)); min-height: 100vh; display: flex; align-items: center;">
     <div class="container">
-      <div class="about-hero">
-        <div class="about-image reveal">
-          <div class="about-image-decoration top">// PROFILE_IMG</div>
-          <div class="about-image-wrapper">
-            <!-- Replace with your actual photo -->
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=700&fit=crop&crop=face" alt="Your Name">
-          </div>
-          <div class="about-image-decoration bottom">LOCATION: NETHERLANDS</div>
-        </div>
-
+      <div class="about-hero about-hero--no-image">
         <div class="about-content reveal">
           <span class="section-label">About Me</span>
           <h1>I'm <span class="highlight">Ivo</span>, a software developer based in the Netherlands</h1>
@@ -280,6 +271,12 @@
 
   <!-- Additional Styles for About Page -->
   <style>
+    .about-hero--no-image {
+      grid-template-columns: 1fr;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
     .about-stats {
       display: flex;
       gap: var(--space-xl);

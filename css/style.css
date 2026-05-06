@@ -170,6 +170,7 @@ a, button, [role="button"], input, select, textarea {
     linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: gridMove 20s linear infinite;
+  will-change: transform;
 }
 
 .grid-bg::after {
@@ -183,8 +184,8 @@ a, button, [role="button"], input, select, textarea {
 }
 
 @keyframes gridMove {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(60px, 60px); }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(60px, 60px, 0); }
 }
 
 /* Scan lines overlay */
@@ -227,12 +228,13 @@ a, button, [role="button"], input, select, textarea {
   opacity: 0;
   animation: particleFloat 8s ease-in-out infinite;
   box-shadow: 0 0 10px var(--color-accent-glow);
+  will-change: transform, opacity;
 }
 
 @keyframes particleFloat {
   0%, 100% {
     opacity: 0;
-    transform: translateY(100vh) scale(0);
+    transform: translate3d(0, 100vh, 0) scale(0);
   }
   10% {
     opacity: 1;
@@ -242,7 +244,7 @@ a, button, [role="button"], input, select, textarea {
   }
   100% {
     opacity: 0;
-    transform: translateY(-100px) scale(1);
+    transform: translate3d(0, -100px, 0) scale(1);
   }
 }
 
@@ -1666,6 +1668,19 @@ a, button, [role="button"], input, select, textarea {
 
   .preloader {
     display: none;
+  }
+}
+
+/* ---------- Performance: drop expensive decorative overlays on small/low-power devices ---------- */
+@media (max-width: 768px) {
+  .scanlines,
+  .noise,
+  .particles {
+    display: none;
+  }
+
+  .grid-bg::before {
+    animation: none;
   }
 }
 

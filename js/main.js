@@ -269,7 +269,7 @@ const CustomCursor = {
 
 const Particles = {
   container: null,
-  particleCount: 30,
+  particleCount: 14,
 
   init() {
     this.container = document.getElementById('particles');
