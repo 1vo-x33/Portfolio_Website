@@ -16,7 +16,8 @@
   --color-accent-glow: rgba(168, 85, 247, 0.5);
 
   --color-text: #e4e4e7;
-  --color-text-muted: #71717a;
+  /* Lightened from #71717a (~4.1:1) to meet WCAG AA contrast (~6:1) for body copy */
+  --color-text-muted: #9d9da8;
   --color-text-dim: #3f3f46;
 
   --color-grid: rgba(168, 85, 247, 0.08);
@@ -1448,11 +1449,15 @@ a, button, [role="button"], input, select, textarea {
     justify-content: center;
     align-items: center;
     gap: var(--space-xl);
-    transition: right var(--duration-normal) var(--ease-out);
+    /* Keep off-screen links out of the keyboard tab order until opened */
+    visibility: hidden;
+    transition: right var(--duration-normal) var(--ease-out),
+                visibility var(--duration-normal) var(--ease-out);
   }
 
   .nav.active {
     right: 0;
+    visibility: visible;
   }
 
   .nav-link {
@@ -1483,6 +1488,13 @@ a, button, [role="button"], input, select, textarea {
     grid-template-columns: 1fr;
   }
 
+  /* Stack copyright above the social icons instead of cramming them on one row */
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
   .cursor {
     display: none;
   }
@@ -1493,6 +1505,26 @@ a, button, [role="button"], input, select, textarea {
 
   a, button, [role="button"] {
     cursor: pointer;
+  }
+}
+
+/* ---------- Small phones ---------- */
+@media (max-width: 480px) {
+  .hero-title {
+    /* Smaller floor so long lines ("in the making") don't crowd narrow screens */
+    font-size: clamp(2.25rem, 12vw, 10rem);
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-stats {
+    gap: var(--space-md);
+  }
+
+  .project-meta {
+    gap: var(--space-md);
   }
 }
 
